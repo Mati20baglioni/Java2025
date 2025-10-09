@@ -1,0 +1,87 @@
+🧪 Parcial Simulado de Programación II
+🎮 Sistema de Gestión de una Tienda de Videojuegos
+✅ Enunciado
+
+Una tienda de videojuegos quiere desarrollar un sistema para gestionar su catálogo de productos. En la tienda se ofrecen:
+
+Juegos físicos
+
+Juegos digitales
+
+Accesorios
+
+Cada ítem debe registrar información general como:
+
+nombre
+
+precio
+
+una lista de etiquetas (por ejemplo: "acción", "multijugador", "VR")
+
+tipo de producto: FISICO, DIGITAL, ACCESORIO
+
+🎮 Categorías específicas
+
+Cada tipo de producto tendrá información adicional:
+
+📀 Juego físico:
+
+incluye un atributo int cantidadEnStock
+
+método esPopular() → devuelve true si hay más de 50 copias en stock
+
+🌐 Juego digital:
+
+incluye un atributo double tamañoEnGB
+
+método esLigero() → true si el tamaño es menor a 5 GB
+
+🕹️ Accesorio:
+
+incluye un atributo boolean compatibleConPC
+
+método esParaPC() → retorna true si es compatible
+
+✅ El sistema debe permitir:
+
+Agregar o eliminar productos del catálogo
+
+Consultar por una categoría específica (físico, digital, accesorio)
+
+Filtrar productos en un rango de precios
+
+Listar solo juegos físicos que tengan más de X copias
+
+Filtrar juegos digitales que sean ligeros
+
+Filtrar accesorios compatibles con PC
+
+Ordenar el catálogo por precio o por nombre
+
+Recorrer todos los productos y ejecutar acciones según su tipo:
+
+Juego físico → verificar si es popular
+
+Juego digital → verificar si es ligero
+
+Accesorio → mostrar si es para PC
+
+🔧 Requisitos técnicos mínimos
+
+Uso exclusivo de ArrayList (no Set, ni Map, ni Stream, ni archivos)
+
+Uso de herencia: clase base Producto y clases hijas
+
+Uso de polimorfismo y instanceof
+
+Implementar al menos una acción específica en cada clase hija
+
+Menú en consola para operar el sistema
+
+💡 Extra (opcional, para sumar puntos)
+
+Implementar Comparable o usar Comparator para ordenar
+
+Usar toString() para mostrar objetos con buen formato
+
+Validar si el catálogo está vacío antes de mostrar cosas

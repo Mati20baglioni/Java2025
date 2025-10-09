@@ -1,0 +1,17 @@
+Iterator<Productos> it = Tienda.iterator();
+                    boolean eliminado = false;
+
+                    System.out.print("Ingrese el nombre del producto que desea eliminar: ");
+                    teclado.nextLine(); // limpiar buffer
+                    String nombreBuscado = teclado.nextLine();
+
+                    while (it.hasNext()) {
+                        Productos p = it.next();
+
+                        if (p.getNombre().equalsIgnoreCase(nombreBuscado)) {
+                            it.remove();
+                            System.out.println("Producto eliminado: " + p.getNombre());
+                            eliminado = true;
+                            break;
+                        }
+                    }

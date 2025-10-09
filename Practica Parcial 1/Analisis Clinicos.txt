@@ -1,0 +1,68 @@
+🧪Modelo de Parcial – Programación II
+Sistema de Gestión de Laboratorio de Análisis Clínicos
+
+Una clínica médica desea desarrollar un sistema para gestionar las muestras de análisis clínicos tomadas a sus pacientes. Cada muestra contiene información general como:
+
+ID (autoincrementable)
+
+Nombre del paciente
+
+Edad
+
+Tipo de análisis (SANGRE, ORINA, ADN)
+
+Fecha de toma de muestra
+
+Además, según el tipo de análisis, cada muestra debe almacenar datos específicos:
+
+🔬 Tipos de análisis:
+1. Análisis de Sangre
+
+Nivel de glóbulos rojos, blancos y plaquetas
+
+Método: promedioComponentes() → retorna el promedio general de los tres componentes
+
+Método: esNivelCritico() → retorna true si alguno de los componentes supera valores preestablecidos
+
+2. Análisis de Orina
+
+Presencia de proteínas, glucosa y pH
+
+Método: nivelAcidez() → devuelve un String indicando si es "Ácido", "Neutro" o "Alcalino" según el pH
+
+Método: tieneAnormalidades() → retorna true si hay proteínas o glucosa
+
+3. Análisis de ADN
+
+Porcentaje de coincidencia con una muestra patrón
+
+Método: esCompatible(double umbral) → devuelve true si el porcentaje supera el umbral dado
+
+Método: informeCoincidencia() → devuelve un texto detallado con la conclusión
+
+🧩 Requisitos del sistema:
+
+Agregar y eliminar muestras del sistema
+
+Buscar muestra por ID
+
+Filtrar muestras por tipo de análisis
+
+Filtrar por rango de edad del paciente
+
+Ordenar las muestras por nombre del paciente o fecha
+
+Recorrer todas las muestras y ejecutar los métodos propios según el tipo (ej: calcular promedio, analizar coincidencia, etc.)
+
+🔧 Requisitos de implementación:
+
+Cada muestra debe tener un ID autoincrementable.
+
+Debe haber al menos una interfaz, por ejemplo:
+Analizable con el método generarInforme() obligatorio.
+
+Cada clase debe implementar sus propios métodos específicos.
+
+El código debe compilar sin errores, tener clases, interfaces, atributos y métodos correctamente definidos.
+
+Es valorado positivamente el uso de comentarios y buenas prácticas de codificación.

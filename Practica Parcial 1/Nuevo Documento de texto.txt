@@ -1,0 +1,47 @@
+Programación II
+Primer Parcial
+Condiciones mínimas de aprobación:
+● Para la revisión del código, se solicita mínimamente que el proyecto compile
+sin errores.
+● Creación de todas las Clases, Interfaces, Atributos y Métodos solicitados de
+manera explícita en el enunciado.
+● Es valorable que se documente/comente el código para aplicar buenas
+prácticas y para facilitar la corrección del examen.
+
+
+SISTEMA DE GESTIÓN DE UN RESTAURANTE
+Un prestigioso restaurante desea modernizar su sistema de organización
+para llevar un control de los diferentes platos y bebidas que ofrece en su
+menú.
+
+El establecimiento no solo necesita almacenar la información básica de cada
+preparación, sino también poder realizar búsquedas y clasificaciones que
+faciliten la planificación de sus servicios.
+Cada ítem del menú debe registrar datos generales como nombre, precio,
+una lista de ingredientes principales y tipo de preparación (ENTRADA,
+PRINCIPAL, POSTRE O BEBIDA) . Sin embargo, cada categoría posee
+características adicionales:
+
+• Los platos deben indicar la cantidad de calorías y tener la capacidad de
+informar si pueden considerarse aptos como menú saludable en función de
+su composición.
+
+• Las bebidas deben especificar si son alcohólicas o sin alcohol y poder
+calcular el porcentaje de descuento en base a este dato (20% ALCOHOLICAS
+y 10% NO ALCOHOLICAS).
+
+• Los postres deben detallar si contienen o no azúcar agregada.
+
+El sistema debe permitir:
+• Incorporar o retirar preparaciones del menú.
+• Consultar únicamente por una categoría determinada (platos, bebidas o
+postres).
+• Filtrar ítems dentro de un rango de precios.
+• Listar solo platos que no superen cierto nivel de calorías.
+• Localizar bebidas según su tipo.
+• Ordenar las preparaciones resultantes por precio o por nombre.
+
+Finalmente, será necesario contar con un recorrido que, al analizar cada
+preparación registrada, ejecute la acción correspondiente según su
+naturaleza: comprobar si un plato puede ofrecerse como saludable, calcular
+la promoción de una bebida, o visualizar la información de un postre.
