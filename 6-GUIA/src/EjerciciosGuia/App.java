@@ -1,30 +1,137 @@
 package EjerciciosGuia;
 
+import EjerciciosGuia.Ejercicio_1.Almacenamiento;
+import EjerciciosGuia.Ejercicio_2.Pila;
+import EjerciciosGuia.Ejercicio_3.OperacionMatematica;
+import EjerciciosGuia.Ejercicio_4.Conjunto;
+import EjerciciosGuia.Ejercicio_5.Lista_Ordenada;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) {
+        Scanner teclado=new Scanner(System.in);
+        int op;
+        /// 1
+        Almacenamiento<String>almacenString=new Almacenamiento<>();
+        ArrayList<Integer>Lista=new ArrayList<>();
+        Almacenamiento<Integer>almacenInteger=new Almacenamiento<>(Lista);
+        /// 2
+        Pila<String>pilaStrings=new Pila<>();
+        Pila<Integer>pilaInteger=new Pila<>();
+        /// 3
+        OperacionMatematica<Integer>Enteros=new OperacionMatematica<>();
+        /// 4
+        Conjunto<String>guardarS=new Conjunto<>();
+        /// 5
+        Lista_Ordenada<Integer> listaAsc = new Lista_Ordenada<>(true);
+        Lista_Ordenada<String> listaDesc = new Lista_Ordenada<>(false);
 
+
+        /// 6
+
+        do {
+            System.out.println("ingresa una opcion:");
+            System.out.println(("(0)-Salir."));
+            System.out.println(("(1)-Clase Generica Almacenamiento."));
+            System.out.println(("(2)-Clase Generica Pila. "));
+            System.out.println(("(3)-Clase Generica Operacion Matematica."));
+            System.out.println(("(4)-Clase Generica Conjunto. "));
+            System.out.println(("(5)-Clase Generica Lista Ordenada."));
+            System.out.println(("(6)-Bonus Track "));
+
+            op=teclado.nextInt();
+
+            switch (op){
+                case 0:
+                    System.out.println("Saliendo....");
+                    break;
+                case 1:
+                    almacenString.agregar("Hola");
+                    almacenString.agregar("Mundo");
+                    almacenString.agregar("Hola");
+                    almacenString.agregar("Mundo");
+                    Lista.add(7);
+                    System.out.println("Se agregaron genericos");
+                    System.out.println("muestro los strings");
+                    almacenString.mostrarTodo();
+                    System.out.println("Muestro los integer");
+                    almacenInteger.mostrarTodo();
+
+                    almacenString.buscarObjeto("Hola");
+                    almacenInteger.borrar(7);
+                    break;
+                case 2:
+                    pilaStrings.agregar_A_Pila("Odio ");
+                    pilaStrings.agregar_A_Pila("Estudiar ");
+                    pilaStrings.agregar_A_Pila("Generacidad ");
+                    pilaInteger.agregar_A_Pila(1);
+                    pilaInteger.agregar_A_Pila(2);
+                    pilaInteger.agregar_A_Pila(3);
+
+                    System.out.println("muestro cantidad cargado en pila inger");
+                    int contador=pilaInteger.contadorPila();
+                    System.out.println(contador);
+                    System.out.println("reviso si esta vacia.");
+                    pilaStrings.estaVacia();
+                    System.out.println("quito un numero de la pila integer");
+                    pilaInteger.quitar_De_Pila(2);
+                    System.out.println("muestro cantidad cargado en pila inger");
+                    contador=pilaInteger.contadorPila();
+                    System.out.println(contador);
+
+                    break;
+                case 3:
+                    System.out.println("Operaciones con enteros.");
+                    System.out.println(Enteros.sumar(1,9));
+                    System.out.println(Enteros.restar(5,8));
+                    System.out.println(Enteros.dividir(4,6));
+                    System.out.println(Enteros.multiplicar(8,3));
+                    break;
+                case 4:
+                    System.out.println("guardo strings");
+                    guardarS.agregarElemento("celular");
+                    guardarS.agregarElemento("pc");
+                    guardarS.agregarElemento("jostick");
+
+                    System.out.println("borro un elemento");
+                    guardarS.borrarElemento("pcs");
+                    guardarS.borrarElemento("jostick");
+
+                    System.out.println("verifico si esta dentro");
+                    System.out.println(guardarS.estaEnConjunto("pc"));
+                    break;
+                case 5:
+                    listaAsc.agregar(5);
+                    listaAsc.agregar(2);
+                    listaAsc.agregar(9);
+                    listaAsc.mostrar(); // 2, 5, 9
+
+                    listaDesc.agregar("Mate");
+                    listaDesc.agregar("Café");
+                    listaDesc.agregar("Té");
+                    listaDesc.mostrar(); // Té, Mate, Café
+                    break;
+                case 6:
+                    break;
+                default:
+                    if(op<0 || op>6){
+                        System.out.println("opcion invalida");
+                    }
+            }
+        }while(op!=0);
     }
 }
 
+/**
 
 
 
-/**1.
 
- 3. Crear una clase genérica llamada "OperacionMatematica" que pueda realizar
- operaciones matemáticas simples (suma, resta, multiplicación, división) con
- cualquier tipo de número (enteros, decimales, etc.). Debe tener métodos para
- cada operación y para establecer los números de entrada. Haz pruebas de
- tu clase con diferentes tipos de números.
- 4. Crear una clase genérica llamada "Conjunto" que pueda almacenar
- elementos únicos de cualquier tipo. Debe tener métodos para agregar y
- eliminar elementos, y para verificar si un elemento está en el conjunto. Haz
- pruebas de tu clase con diferentes tipos de elementos.
- 5. Crear una clase genérica llamada "ListaOrdenada" que pueda almacenar
- elementos en orden ascendente o descendente. Debe tener métodos para
- agregar y eliminar elementos, y para obtener el elemento en una posición
- específica. Haz pruebas de tu clase con diferentes tipos de elementos y
- diferentes órdenes de clasificación.
+
+
+
  Ejercicio bonus track 😝:
  Desarrolle un main e invoque únicamente a las funciones que compilen
  correctamente.

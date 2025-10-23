@@ -1,0 +1,21 @@
+[
+  {
+    "numeros": [
+      {
+        "compania": "Movistar",
+        "numero": 2232543313
+      },
+      {
+        "compania": "Claro",
+        "numero": 2236523127
+      }
+    ],
+    "direccion": {
+      "numero": 2123,
+      "calle": "Av. calle1"
+    },
+    "nombre": "Juan",
+    "edad": 22,
+    "dni": 2314312
+  }
+]
